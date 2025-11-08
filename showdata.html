@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Data From Google</title>   
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.3.4/css/dataTables.dataTables.css"/>
+    
+    
+</head>
+ 
+<body>
+<h1>Data From Google</h1>
+    <table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>email</th>
+                <th>contact_number</th>
+                <th>gender</th>
+                <th>message</th>
+                <th>age</th>
+                <th>ex</th>
+                <th>timestamp</th>
+            </tr>
+        </thead>
+        
+    </table>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/2.3.4/js/dataTables.js"></script>
+<script>
+new DataTable('#example', {
+    ajax: 'https://script.google.com/macros/s/AKfycbwh4yXhSUkgqeBiJh990TLwyPqblrZkur5i_uBcCF7NvUdHlFiXLvEYkjHaDLOjkzvFpw/exec',
+    columns: [
+        { data: 'name'},
+        { data: 'email'},
+        { data: 'contact_number'},
+        { data: 'gender'},
+        { data: 'message'},
+        { data: 'age'},
+        { data: 'ex'},
+        { data: 'timestamp' }
+
+    ]
+});
+</script>
+</body>
+
+</html>
